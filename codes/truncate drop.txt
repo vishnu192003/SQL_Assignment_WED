@@ -1,0 +1,14 @@
+
+//  TRUNCATE & DELETE
+
+INSERT INTO truncate_drop_table (c_name, employees, location) VALUES
+('Infosys',5000,'Pune'),
+('TCS',8000,'Mumbai'),
+('Wipro',6000,'Bangalore'),
+('HCL',4000,'Chennai'),
+('TechMahindra',3000,'Hyderabad')
+
+--TRUNCATE 
+TRUNCATE TABLE  truncate_drop_table ;
+--DROP 
+DROP TABLE truncate_drop_table 

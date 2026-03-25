@@ -1,0 +1,64 @@
+// CREATE & INSERT
+
+.....
+
+// WHERE CLAUSE 
+
+CREATE TABLE employee (e_id INT, e_name VARCHAR, age INT, department VARCHAR, salary NUMERIC);
+
+select * from employee
+
+INSERT INTO employee VALUES 
+(1,'Aman',25,'HR',30000),
+(2,'Sita',28,'IT',50000),
+(3,'Raj',24,'Finance',22000),
+(4,'Neel',30,'IT',60000),
+(5,'Tina',26,'HR',18000)
+
+SELECT * FROM employee WHERE salary > 25000
+
+// ORDER BY
+
+CREATE TABLE order_table(s_id SERIAL , s_name VARCHAR, age INT, course VARCHAR, fees NUMERIC)
+
+INSERT INTO order_table (s_name, age, course, fees) VALUES 
+('Rahul',20,'BCA',25000),
+('Sneha',21,'BBA',30000),
+('Amit',19,'BSc',20000),
+('Priya',22,'MBA',50000),
+('Karan',20,'BCom',22000)
+
+SELECT * FROM order_table
+
+SELECT * FROM order_table ORDER BY fees DESC;
+
+// UPDATE AND DELETE
+
+CREATE TABLE updatedelete_table (e_id SERIAL , e_name VARCHAR, age INT, department VARCHAR, salary NUMERIC)
+
+INSERT INTO updatedelete_table (e_name, age, department, salary) VALUES
+('Aman',25,'HR',30000),
+('Tushar',28,'IT',50000),
+('Raj',24,'Finance',22000),
+('Neel',30,'IT',60000),
+('Rina',26,'HR',18000)
+
+select * from updatedelete_table
+-- UPDATE
+UPDATE updatedelete_table SET department = 'Python' WHERE e_id = 2
+-- DELETE
+DELETE FROM updatedelete_table WHERE e_id = 4
+
+//  TRUNCATE & DELETE
+
+INSERT INTO truncate_drop_table (c_name, employees, location) VALUES
+('Infosys',5000,'Pune'),
+('TCS',8000,'Mumbai'),
+('Wipro',6000,'Bangalore'),
+('HCL',4000,'Chennai'),
+('TechMahindra',3000,'Hyderabad')
+
+--TRUNCATE 
+TRUNCATE TABLE  truncate_drop_table ;
+--DROP 
+DROP TABLE truncate_drop_table 

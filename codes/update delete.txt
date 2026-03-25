@@ -1,0 +1,19 @@
+
+
+// UPDATE AND DELETE
+
+CREATE TABLE updatedelete_table (e_id SERIAL , e_name VARCHAR, age INT, department VARCHAR, salary NUMERIC)
+
+INSERT INTO updatedelete_table (e_name, age, department, salary) VALUES
+('Aman',25,'HR',30000),
+('Tushar',28,'IT',50000),
+('Raj',24,'Finance',22000),
+('Neel',30,'IT',60000),
+('Rina',26,'HR',18000)
+
+select * from updatedelete_table
+-- UPDATE
+UPDATE updatedelete_table SET department = 'Python' WHERE e_id = 2
+-- DELETE
+DELETE FROM updatedelete_table WHERE e_id = 4
+

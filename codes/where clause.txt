@@ -1,0 +1,17 @@
+
+
+// WHERE CLAUSE 
+
+CREATE TABLE employee (e_id INT, e_name VARCHAR, age INT, department VARCHAR, salary NUMERIC);
+
+select * from employee
+
+INSERT INTO employee VALUES 
+(1,'Aman',25,'HR',30000),
+(2,'Sita',28,'IT',50000),
+(3,'Raj',24,'Finance',22000),
+(4,'Neel',30,'IT',60000),
+(5,'Tina',26,'HR',18000)
+
+SELECT * FROM employee WHERE salary > 25000
+
